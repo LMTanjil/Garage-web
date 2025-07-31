@@ -1,1 +1,1 @@
-Athor - "Tanjil"
+Author - Tanjil Hussain
