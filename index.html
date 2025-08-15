@@ -6,6 +6,7 @@
     <title>Garage Repairing</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bayon&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 
 </head>
 <body>
@@ -14,15 +15,21 @@
             <div class="nav-logo">
                 <div class="logo-icon"></div>
             </div>
+            <!-- Added hamburger menu button -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="nav-opt">
                 <ul class="nav-ul-opt">
-                    <li class="#home">Home</li>
-                    <li class="#team">Team</li>
-                    <li class="#services">Services</li>
-                    <li class="#our-work">Our Work</li>
-                    <li class="#testimonials">Testimonials</li>
-                    <li class="#faq">FAQ</li>
-                    <li class="#services">Services Areas</li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#our-work">Our Work</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#areas">Service Areas</a></li>
                 </ul>
             </div>
             <div class="nav-contact">
@@ -30,7 +37,9 @@
                     <a href="#contact-us">Contact Us</a>
                 </div>
             </div>
+                    
         </nav>
+
         <div class="hero-info">
             <div class="hero-info-inner">
                 <div class="hero-info-box1">
@@ -53,7 +62,7 @@
                 <div class="hero-help-text-sec">
                     <div class="hero-help-logo"><img src="images\white-logo.svg" alt="" srcset=""><p class="hero-help-logo-text">Emergency Garage Door Repair</p></div>
                     <h2>24/7 Emergency Garage Door Repair</h2>
-                    <p>Garage door won't open or close? Spring snapped? We're ready anytime, day or night, to <br>fix  it fast. Call us now for emergency garage door repair in London and surrounding areas.</p>
+                    <p>Garage door won't open or close? Spring snapped? We're ready anytime, day or night, to fix  it fast. Call us now for emergency garage door repair in London and surrounding areas.</p>
                 </div>
                 <div class="emer-btn-box"><button class="emer-btn"><img src="images\phone-icon.svg" alt="">Get Emergency Help Now</button></div>
             </div>
@@ -640,7 +649,7 @@
                             <input type="text" class="form-input" placeholder="Preferred date" onfocus="this.type='date'" onblur="this.type='text'">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" id="toTime" required placeholder="To time" onfocus="this.type='time'" onblur="this.type='text'">
+                            <input type="text" class="form-input" id="toTime" required placeholder="To time" onfocus="this.type='time'"  onblur="this.type='text'">
                         </div>
                     </div>
                     <div class="form-group">
@@ -710,5 +719,6 @@
             </div>
         </section>
     </footer>
+
 </body>
 </html>
