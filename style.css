@@ -457,6 +457,7 @@ body{
     height: 41.7rem;
     width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -553,7 +554,7 @@ body{
 .meet-ppl-box{
     height: 32rem;
     width: 40rem;
-    background: url("images/Rectangle 7.svg");
+    background: url("images/meetpeople-red-bg.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -565,6 +566,7 @@ body{
 .meet-ppl-img{
     width: 92%;
     height: 80%;
+    aspect-ratio: 1.435 / 1;
     background-image: url("images/meet-ppl-img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -2647,10 +2649,17 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     height: 63rem;
   }
 
-  
+  .meet-main{
+    height: 41.7rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 
   .meet-main-box{
-    display: flex;
+    width: 90%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -2660,22 +2669,34 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
   .meet-text-box{
     height: 45%;
-    width: 90%;
-    justify-content: flex-end;
+    width: 100%;
+    justify-content: flex-start;
     align-self: flex-end;
+    justify-self: flex-end;
   }
 
   .meet-ppl-box{
-    height: 55%;
+    height: 65%;
     width: 80%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    align-self: flex-start;
   }
 
   .meet-text-title{
     display: none;
+  }
+
+  .meet-ppl-img{
+    aspect-ratio: 1.27 / 1;
+    /* background-image: url("images/meet-people.svg"); */
+    background-size: contain;
+  }
+
+  .meet-people-h{
+    --h2-fs : 2rem;
+    font-size: var(--h2-fs);
+
   }
 
 }
@@ -2797,6 +2818,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   height: 2.7rem;
   width: 15rem;
   --p-fs: 14px;
+}
+
 }
 
 }
