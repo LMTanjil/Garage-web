@@ -466,7 +466,7 @@ body{
     height: 32rem;
     width: 90%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -516,7 +516,7 @@ body{
     margin-bottom: 1.1rem;
 }
 
-.features-list li {
+.features-list > li {
     display: flex;
     align-items: flex-start;
     /* margin-bottom: var(--p-fs); */
@@ -646,13 +646,13 @@ body{
 }
 
 .boxes {
-    height: 59.2rem;
-    width: 80%;
+    height: 80%;
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    margin: 2rem auto;
-    padding: 1rem;
+    margin: 2rem 0;
+    /* padding: 1rem; */
 }
 
 
@@ -660,10 +660,11 @@ body{
   background: var(--clr-white);
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(30, 42, 73, 0.08);
-  padding: 24px 20px 16px 20px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  /* aspect-ratio: 1 / 1.2; */
 }
 
 .box > span {
@@ -734,6 +735,11 @@ body{
 
 }
 
+/*  Arrow Button For Next And Previous items */
+.arrow-btn{
+  display: none;
+}
+
 .stats-title {
 	color: var(--clr-white);
 	font-size: var(--h2-fs);
@@ -747,7 +753,6 @@ body{
 .stats-grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	/* gap: 4rem; */
 	width: 90%;
   height: auto;
 	margin: 0 auto;
@@ -927,49 +932,7 @@ body{
   color: var(--clr-black);
   line-height: 1.2;
 }
-@media (max-width: 1200px) {
-  .features-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-  .feature-image-area {
-    grid-row: 3 / 4;
-    grid-column: 1 / 4;
-    min-height: 18rem;
-    margin-top: 2rem;
-  }
-}
-@media (max-width: 900px) {
-  .features-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr) 1.2fr;
-    gap: 1.2rem;
-  }
-  .feature-card {
-    min-height: 7rem;
-    padding: 1.2rem 0.8rem;
-  }
-  .feature-image-area {
-    grid-row: 7 / 8;
-    grid-column: 1 / 2;
-    min-height: 14rem;
-    margin-top: 1.2rem;
-  }
-  .feature-badge {
-    left: 1rem;
-    bottom: 1rem;
-    min-width: 12rem;
-    padding: 0.4rem 1.2rem 0.4rem 0.8rem;
-  }
-  .feature-badge-number {
-    font-size: 1.2rem;
-    padding: 0.2rem 0.7rem;
-    margin-right: 0.6rem;
-  }
-  .feature-badge-text {
-    font-size: 0.95rem;
-  }
-}
+
 
 /* --- Testimonial Section --- */
 .testimonial-section {
@@ -1072,7 +1035,7 @@ body{
   background: var(--clr-white);
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(30, 42, 73, 0.10);
-  width: 18rem;
+  width: 33%;
   height: 27rem;
   display: flex;
   align-items: center;
@@ -1151,65 +1114,11 @@ body{
   background: var(--clr-blue);
   color: var(--clr-white);
 }
-@media (max-width: 1100px) {
-  .testimonial-content {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    gap: 2rem;
-  }
-  .testimonial-left {
-    max-width: 100%;
-    padding: 1.5rem 0 0.5rem 0;
-    align-items: center;
-    text-align: center;
-  }
-  .testimonial-cards {
-    justify-content: center;
-  }
-}
-@media (max-width: 900px) {
-  .testimonial-section {
-    height: auto;
-    padding: 2rem 0;
-  }
-  .testimonial-content {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 0 0.5rem;
-  }
-  .testimonial-cards {
-    flex-direction: column;
-    gap: 1.2rem;
-  }
-  .testimonial-card {
-    width: 90vw;
-    max-width: 22rem;
-    height: 18rem;
-  }
-}
-@media (max-width: 600px) {
-  .testimonial-section {
-    padding: 1rem 0;
-  }
-  .testimonial-card {
-    width: 98vw;
-    max-width: 19rem;
-    height: 13rem;
-  }
-  .testimonial-arrows {
-    gap: 0.7rem;
-  }
-  .testimonial-arrow {
-    width: 2.2rem;
-    height: 2.2rem;
-    font-size: 1.1rem;
-  }
-}
+
 
 .process-section {
   width: 100%;
-  height: 48.8rem;
+  height: 54rem;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -1290,8 +1199,8 @@ body{
 
 .pcs-num-icon {
   display: inline;
-  height: 6rem;
-  width: 7rem;
+  height: 7rem;
+  width: 6rem;
   justify-self: flex-end;
   align-self: flex-end;
 }
@@ -1303,6 +1212,7 @@ body{
   color: var(--clr-black);
   font-weight: var(--para-fw);
   margin-bottom: var(--p-fs);
+  font-size: var(--h3-fs);
 
 }
 
@@ -1329,33 +1239,9 @@ body{
 }
 
 
-@media (max-width: 1150px) {
-.process-grid {
-grid-template-areas: 
-"card1 card2"
-"card3 card4"
-"card5 card5";
-grid-template-columns: 1fr 1fr;
-}
-}
-
-@media (max-width: 768px) {
-.process-grid {
-grid-template-areas: none;
-grid-template-columns: 1fr;
-}
-
-.process-title {
-font-size: 2rem;
-margin-bottom: 30px;
-}
-
-.process-card {
-padding: 30px 25px;
-}
-}
 
 
+/* OFFER SECTION */
 .offers-section{
   height: 67.1rem;
   width: 100%;
@@ -1411,18 +1297,18 @@ padding: 30px 25px;
 }
 
 .coupon-section{
-  height: 43.1rem;
+  height: 42rem;
   width: 90%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem; /* spacing between boxes */
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 .coupon-box{
   /* grid-column: span 1; */
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 
@@ -1529,15 +1415,24 @@ padding: 30px 25px;
   width: 80%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
   gap: 1.2rem;
   justify-self: center;
-  padding: 3rem 0;
+  align-items: center;
+  align-content: center;
+  padding: 2rem 0;
 }
-
+ 
 .repair-box{
+  height: 100%;
   background-color: var(--clr-white);
   border-radius: var(--p-fs);
   padding: var(--p-fs);
+}
+
+.repair-txt-con{
+  height: 50%;
+  width: 100%;
 }
 
 .rpr-img-con{
@@ -1576,6 +1471,41 @@ padding: 30px 25px;
   padding: 0.2rem 0.5rem;
   border-radius: 5rem;
   margin: 1rem 0;
+}
+
+
+.book-now {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.book-now > p{
+    /* margin-top: 0.2rem;  */
+    font-size: var(--p-fs);
+    color: var(--clr-black);
+    font-weight: var(--para-fw);
+}
+
+
+.book-now > .arrow {
+    background-size: 1.5rem 1.5rem;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+}
+
+.rpr-arrow-btn{
+  width: 100%;
+  display: none;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .rpr-contact-sec{
@@ -2138,6 +2068,7 @@ padding: 30px 25px;
 .rqs-input-form{
   background-color: var(--clr-white);
   border-radius: var(--p-fs);
+  padding: 2rem;
 }
 
 .rqs-txt-tittle{
@@ -2345,12 +2276,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .footer-abt{
-  height: 80%;
+  height: 90%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
 }
+
+
 
 .f-abt-box > h3{
   font-size: var(--h3-fs);
@@ -2412,6 +2345,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .footer-phone-div >p{
   font-weight: var(--t-font-w);
   color: var(--clr-blue);
+  font-size: 0.9rem;
 }
 
 .footer-home-div > p{
@@ -2431,6 +2365,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 
@@ -2461,8 +2396,291 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 
+/* here is the style for 1300px */
+@media screen and (max-width:1300px){
+
+  .testimonial-section{
+    height: auto;
+  }
+
+  .garage-solution{
+    height: auto;
+    gap: 1.5rem;
+  }
+
+  .boxes{
+    grid-template-columns: repeat(6 , 1fr);
+    /* overflow-y: hidden; */
+    grid-auto-flow: column;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* grid-auto-columns: 343px; */
+  
+  }
+  .boxes::-webkit-scrollbar{
+    display : none;
+  }
+
+  .box{
+    width: 350px;
+    height: 450px;
+  }
+
+    .arrow-btn{
+    /* margin: 0 0 3rem 0; */
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; 
+  }
+
+  .arrow-right{
+    height: 4rem;
+    width: 4rem;
+    aspect-ratio: 1 / 1;
+    background-image: url("images/arrow-right-icon.svg");
+    background-size: contain;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer; 
+  }
+
+  .arrow-left{
+    height: 4rem;
+    width: 4rem;
+    aspect-ratio: 1 / 1;
+    background-image: url("images/arrow-left-icon.svg");
+    background-size: contain;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+    /* .box{
+      width: 343px;
+      aspect-ratio: 1 / 1.2;
+  }
+   */
+
+  .process-section{
+    height: 64rem;
+  }
+
+  .process-grid{
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+.process-card:nth-child(1){
+  grid-column: 1 / 4;
+}
+
+.process-card:nth-child(2){
+  grid-column: 4 / 7;
+}
+
+.process-card:nth-child(3){
+  grid-column: 7 / 10;
+}
+
+.process-card:nth-child(4){
+  grid-column: 3 / 6;
+}  
+
+.process-card:nth-child(5){
+  grid-column: 6 / 9;
+}
+
+/* OFFERS SECTION */
+.offers-section{
+    height: auto;
+  }
+
+
+.coupon-section{
+  height: 36rem;
+  margin-bottom: 5rem;
+}
+
+
+/* repair section */
+
+.repair-con{
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+}
+
+.repair-con::-webkit-scrollbar{
+  display: none;
+}
+
+.rpr-arrow-btn{
+  display: flex;
+
+}
+
+.rpr-arrow-left,
+.rpr-arrow-right{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.repair-box{
+  width: 325px;
+  --p-fs: 0.9rem;
+  --h3-fs: 1.3rem;
+}
+.repair-box >p{
+  line-height: 1.3;
+  --p-fs: 0.9rem;
+}
+
+/* GARAGE QS SECTION */
+.garage-qs-section{
+  height: auto;
+}
+
+.garage-qs-inner{
+  /* grid-template-rows: 1fr, 1fr; */
+  grid-template-columns: 1fr;
+  /* height: 90%; */
+  margin: 5rem 0;
+}
+  
+}
+
+/* Bellow here is style for 1130px */
+@media screen and (max-width: 1130px){
+  .meet-ppl-box{
+    width: 50%;
+  }
+
+  .features-list > li{
+    margin-top: 0.8rem;
+  }
+
+  .meet-text-title{
+    display: none;
+
+  }
+  .meet-ppl-img{
+    aspect-ratio: 1.27 / 1;
+    /* background-image: url("images/meet-people.svg"); */
+    background-size: contain;
+  }
+
+  .meet-text-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .call-button{
+    /* justify-self: flex-end; */
+    align-self: flex-start;
+
+  }
+
+  .meet-main{
+    height: 28rem;
+  }
+
+  .gr-txt-con{
+  --h2-fs: 2.2rem;
+  }
+
+  
+
+  .garage-solution{
+    height: auto;
+  }
+
+    .box{
+    width: 343px;
+    }
+
+  .testimonial-content{
+    flex-direction: column;
+  }
+
+  .testimonial-left{
+    width: 100%;
+  }
+
+  .testimonial-desc{
+    width: 70%;
+  }
+
+  .testimonial-video-con{
+    width: 100%;
+  }
+
+  /* process-section */
+
+    .process-grid{
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+.process-card:nth-child(1){
+  grid-column: 1 / 5;
+}
+
+.process-card:nth-child(2){
+  grid-column: 5 / 9;
+}
+
+.process-card:nth-child(3){
+  grid-column: 1 / 5;
+}
+
+.process-card:nth-child(4){
+  grid-column: 5 / 9;
+}
+
+.process-card:nth-child(5){
+  grid-column: 3 / 7;
+}
+
+.process-tittle-top{
+  margin: 2.5rem 0;
+}
+
+.process-card{
+  padding: 1.5rem;
+}
+
+.process-card h3{
+    --h3-fs: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+
+  /* OFFERS SECTION */
+.offers-section{
+    height: auto;
+  }
+
+
+.coupon-section{
+  height: 30rem;
+  margin-bottom: 4rem;
+
+}
+
+}
+
+
+
  /* Media Queries  for 900px*/
-@media (max-width: 900px) {
+@media screen and  (max-width: 900px) {
   .nav-logo{
     width: 6rem;
     height: 5.9rem;
@@ -2650,25 +2868,26 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
 
   .meet-main{
-    height: 41.7rem;
+    height: 70%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-
+  }
   .meet-main-box{
+    height: 90%;
     width: 90%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: stretch;
     align-items: center;
     gap: 2rem;
 
   }
 
   .meet-text-box{
-    height: 45%;
+    height: 60%;
     width: 100%;
     justify-content: flex-start;
     align-self: flex-end;
@@ -2676,8 +2895,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
 
   .meet-ppl-box{
-    height: 65%;
-    width: 80%;
+    height: 50%;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -2694,17 +2913,191 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
 
   .meet-people-h{
-    --h2-fs : 2rem;
-    font-size: var(--h2-fs);
+    --h2-fs: 2.4rem;
+  }
+
+  /* here is the style of garege solution */
+
+
+  .gr-txt-con > h2{
+    --h2-fs: 2rem;
+  }
+
+  .gr-txt-con {
+    width: 90%;
+  }
+
+  .box > span{
+    --h3-fs : 1.3rem
+  }
+
+  .box > p{
+    --p-fs: 0.9rem;
+  }
+
+  /* .boxes{
+    height: auto;
+  } */
+
+  .arrow-right,
+  .arrow-left{
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .box{
+  width: 320px;
+  height: 420px;
+}
+
+
+
+/* stats Section style is here */
+  .stats-section{
+    height: auto;
+    gap: 2.5rem;
 
   }
 
+  .stats-title{
+    --h2-fs: 2.2rem;
+    margin: 3rem 0 1.5rem 0;
+    height: auto;
+  }
+
+  .stats-grid{
+	grid-template-columns: repeat(2, 1fr);
+	margin: 3rem 0;
+  gap: 1rem;
+
+  }
+
+   /* here will be the style of feature grid  */
+  .features-section{
+    height: 90rem;
+  }
+
+  .features-grid{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  
+  .feature-image-area{
+    grid-column: 1 / span 3;
+    grid-row: 3 / 6;
+  }
+
+
+  /* TESTIMONIAL SECTION */
+  .testimonial-section{
+    height: 62rem;
+  }
+
+  .testimonial-content{
+    height: 95%;
+    width: 95%;
+  }
+
+  .testimonial-title{
+    --h2-fs: 2.2rem
+  }
+
+  .testimonial-cards{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+
+  }
+
+  .testimonial-cards::-webkit-scrollbar{
+    display: none;
+  }
+
+  .testimonial-card{
+    min-width: 285px;
+  }
+
+  /* PROCESS CARD H3 */
+  .process-card h3{
+    --h3-fs: 1.3rem;
+  }
+
+  .pcs-num-icon{
+    height: 5rem;
+    width: 5rem;
+  }
+
+  /* OFFERS SECTION */
+  .offers-section{
+    height: auto;
+  }
+
+.coupon-section{
+  height: 24rem;
+  margin-bottom: 3rem;
 }
+
+/* REPAIR SECTION */
+.install-section{
+  height: auto;
+}
+
+.rpr-contact-sec >p{
+  width: 80%;
+  text-align: center;
+}
+
+.rpr-contact-btn-box{
+  flex-direction: column;
+  align-items: center;
+}
+
+.rpr-contact-btn,
+.rpr-contact-btn-2{
+  width: 15rem;
+}
+
+/* AVAILABILITY SECTION */
+.availability{
+  height: 54rem;
+}
+
+.avl-inner{
+  height: 90%;
+  grid-template-columns: 1fr;
+}
+
+
+
+
+/* REQUEST FROM SECTION */
+.rqs-service{
+  height: auto;
+  width: 100%;
+}
+
+
+.rqs-inner{
+  height: 90%;
+  grid-template-columns: 1fr;
+  margin: 2.5rem 0;
+}
+
+}
+
 
 
  /* Media Queries for 700px*/
 
 @media  screen and (max-width:700px) {
+
+  :root{
+    --p-fs: 0.9rem;
+    --h2-fs: 1.9rem;
+  }
+
   .nav-logo{
     width: 5rem;
   }
@@ -2735,6 +3128,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   .garage-text{
     --h3-fs: 1.4rem;
     font-size: var(--h3-fs);
+  }
+
+  .get-est-box{
+    width: 90%;
   }
 
   .get-est-box > h3{
@@ -2770,8 +3167,264 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   width: 17rem;
   --p-fs: 14px;
   }
+
+  .meet-people-h{
+    --h2-fs: 2.2rem;
+    margin: 0.5rem 0 0.8rem 0;
+
+  
+  }
+
+  .meet-intro{
+    height: 95%;
+    width: 90%;
+  }
+
+  .features-list > li{
+    margin-top: 0.8rem;
+  }
+
+  .gr-txt-con{
+    width: 90%;
+  }
+
+  .gr-txt-con > h2{
+    --h2-fs: 2rem;
+  }
+
+  .boxes{
+    height: 30rem;
+  }
+
+  .arrow-right,
+  .arrow-left{
+    height: 3.7rem;
+    width: 3.7rem;
+  }
+
+  .stat-number{
+    font-size: 5rem;
+  }
+
+    /* here will be the style of feature grid  */
+  .feature-section{
+    height: 80rem;
+  }
+
+  .features-grid{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  
+  .feature-image-area{
+    grid-column: 1 / span 2;
+    grid-row: 4 / 6;
+  }
+
+  .ftr-txt-hdr{
+    --h2-fs: 2rem;
+  }
+
+  .features-text-con{
+    padding: 3rem 0;
+  }
+
+  /* TESTIMONIAL SECTION */
+  .testimonial-title{
+    --h2-fs: 2rem;
+  }
+
+  .testimonial-desc{
+    width: 100%;
+  }
+
+
+  /* PROCESS SECTION */
+
+  .process-section{
+    height: 84rem;
+  }
+
+  .process-title{
+    --h2-fs: 2.2rem;
+  }
+
+  .process-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+.process-icon{
+--h2-fs: 2rem;
 }
 
+.pcs-num-icon{
+  height: 4.8rem;
+  width: 3.5rem;
+}
+
+
+
+.process-card >h3{
+  margin-bottom: 0.5rem;
+  --h3-fs: 1.2rem;
+}
+
+.process-card >p{
+  --p-fs: 0.9rem;
+}
+
+.process-card:nth-child(1){
+    grid-row: 1 / 2;
+}
+
+.process-card:nth-child(2){
+   grid-row: 2 / 3;
+
+}
+
+.process-card:nth-child(3){
+    grid-row: 3 / 4;
+
+}
+
+.process-card:nth-child(4){
+    grid-row: 4 / 5;
+
+}
+
+.process-card:nth-child(5){
+    grid-row: 5 / 6; 
+
+} 
+
+.process-tittle-top{
+  margin: 2.5rem 0;
+}
+
+
+/* OFFERS SECTION */
+.offers-section{
+display: none;
+}
+
+/* REPAIR SECTION */
+.repair-con{
+  width: 90%;
+}
+
+.rpr-contact-btn-box{
+  gap: 1rem;
+}
+
+/* INSTALL SECTION */
+.installHdr{
+  --h2-fs: 2rem;
+}
+
+.installation-tittle-sec >p{
+  --p-fs: 14px;
+
+}
+
+/* GARAGE FACT SECTION */
+.fact-button-box{
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.botton-con-text{
+  --h3-fs: 1rem;
+  text-align: center;
+}
+
+.section-title{
+  font-size: 1.9rem;
+}
+
+.section-description{
+  display: none;
+}
+.fact-description{
+  --p-fs: 14px;
+}
+
+.fact-title{
+  --h3-fs: 1rem;
+  color: var(--clr-blue);  
+  text-transform: uppercase;
+
+
+}
+
+/* Footer-section */
+.footer{
+  height: auto;
+
+  :root{
+    --h3-fs:1.2rem;
+  }
+}
+
+.footer-inner{
+  margin: 3rem 0;
+}
+
+.footer-cprt{
+  flex-direction: column;
+  height: 50px;
+}
+
+.footer-cprt > P{
+  text-align: center;
+}
+
+.footer-cprt >ul{
+  justify-content: space-between;
+}
+
+.footer-abt{
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* .f-b-1{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.f-b-2{
+  grid-column: 2 / 3;
+  grid-row: 2 /3;
+}
+
+.f-b-3{
+  grid-column: 1 / 2;
+  grid-row: 1 /2;
+
+}
+*/
+.f-b-4{
+  align-items: flex-start;
+} 
+
+
+.footer-home-div,
+.footer-phone-div{
+  width: 100%;
+}
+
+.social{
+  justify-content: flex-start;
+}
+
+
+
+}
+
+/* from here media quries of 500px  */
 @media screen and (max-width: 500px) {
   .nav-logo{
     width: 4.2rem;
@@ -2820,6 +3473,91 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   --p-fs: 14px;
 }
 
+.meet-ppl-box{
+    background-image: url("images/meet-people.svg");
+
 }
+
+.meet-ppl-img{
+  display: none;
+}
+
+.call-button{
+  /* justify-self: flex-end; */
+  align-self: flex-start;
+  width: 10rem;
+  height: 2.25rem;
+  --p-fs: 12px;
+  gap: 0.3rem;
+}
+
+.call-button > img{
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.features-list > span{
+  --p-fs: 0.9rem;
+}
+.gr-txt-con > h2{
+  --h2-fs: 1.7rem;
+}
+
+.arrow-left,
+.arrow-right{
+  height: 3rem;
+  width: 3rem;
+
+}
+/* STATS SECTION */
+.stats-section{
+  height: 30rem;
+  height: auto;
+
+}
+
+.stat-number{
+  letter-spacing: -2px;
+}
+
+
+/* FEATURE SECTION */
+.features-section{
+  height: auto;
+}
+
+.feature-badge-number{
+  padding: 2rem;
+
+}
+
+/* stats Section style is here */
+
+
+  .stat{
+    align-items: flex-start;
+  }
+
+  .stats-tittle{
+    --h2-fs: 1.7rem;
+  }
+
+  /* PROCESS SECTION */
+  .process-section{
+    height: 90rem;
+  }
+
+  .description{
+    margin-bottom: 1rem;
+  }
+
+  /* REQUEST FROM */
+  .contact-details{
+    gap: 0.5rem;
+  }
+
+  .rqs-inner{
+    width: 90%;
+  }
 
 }

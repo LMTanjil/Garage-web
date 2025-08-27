@@ -78,6 +78,9 @@
         </div>
         <div class="meet-main">
             <div class="meet-main-box">
+                <div class="meet-ppl-box">
+                    <div class="meet-ppl-img"></div>
+                </div>
                 <div class="meet-text-box">
                     <h3 class="meet-text-title">Meet The People Behind Our <br> Success</h3>
                     <ul class="features-list">
@@ -104,9 +107,7 @@
                     </ul>
                     <a href="#" class="call-button"><img src="images\phone-icon.svg" alt="">+883 5100 123456</a>
                 </div>
-                <div class="meet-ppl-box">
-                    <div class="meet-ppl-img"></div>
-                </div>
+                
             </div>
         </div>
 
@@ -114,11 +115,11 @@
     <div class="garage-solution">
         <div class="gr-txt-con">
                 <div class="gr-txt-con-logo"><img src="images\white-logo.svg" alt=""><p>Expert Garage Solutions</p></div> 
-                <h2>Comprehensive Garage <br> Door & Gate Services - Fast, <br> Reliable, 24/7</h2>
+                <h2 id="frbr">Comprehensive Garage <br> Door & Gate Services - Fast, <br> Reliable, 24/7</h2>
                 <p>From installations to emergency repairs, OA Garage Door is your go-to team for all things garage and gate. Explore our full range of services and find the perfect solution for your home or business.
                 </p>
         </div>
-        <div class="boxes">
+        <div class="boxes" id="side-scroll-con">
             <div class="box">
                 <span>Garge Opener Repair</span>
                 <p>OA GARAGE DOOR provides fast motor repairs and replacements. The motor is essential for door movement, and any failure can disrupt the entire system, causing inconvenience and safety concerns.</p>
@@ -184,7 +185,11 @@
                     <p>Book Now</p>
                 </a>
                 <img src="images\garage-repair.jpg" alt="Garage Repair">
-            </div>
+            </div>    
+        </div>
+        <div class="arrow-btn">
+                <button class="arrow-left" id="arrow-left"></button>
+                <button class="arrow-right" id="arrow-right"></button>
         </div>
     </div>
     <section class="stats-section">
@@ -212,7 +217,7 @@
     <section class="features-section">
         <div class="features-text-con">
             <div class="ftr-txt-title"><img src="images\nav-logo.svg" alt="company-logo"> <p>Expert Garage Solutions</p></div>
-            <h2 class="ftr-txt-hdr">Comprehensive Garage <br> Door & Gate Services - Fast, <br> Reliable, 24/7</h2>
+            <h2 class="ftr-txt-hdr" id="frbr">Comprehensive Garage <br> Door & Gate Services - Fast, <br> Reliable, 24/7</h2>
             <div class="ftr-txt-para">From installations to emergency repairs, OA Garage Door is your go-to team for all things garage and gate. Explore <br> our full range of services and find the perfect solution for your home or business.</div>
         </div>
         <div class="features-element-con">
@@ -245,7 +250,7 @@
                     <div class="ftr-img-con"></div>
                     <div class="feature-badge">
                         <span class="feature-badge-number">20+</span>
-                        <span class="feature-badge-text">Years Of Smart<br>Working Experience</span>
+                        <span class="feature-badge-text" id="frbr">Years Of Smart<br>Working Experience</span>
                     </div>
                 </div>
             </div>
@@ -260,8 +265,8 @@
                 <p class="testimonial-desc">Homeowners across Sacramento trust OA Garage Door for fast service, expert repairs, and smooth installations. Here's what they had to say after working with our team.</p>
                 <button class="testimonial-btn">Get Free Estimate</button>
             </div>
-            <div class="testimonial-video-con">
-                <div class="testimonial-cards">
+            <div class="testimonial-video-con" >
+                <div class="testimonial-cards" id="side-scroll-con">
                     <div class="testimonial-card">
                         <div class="testimonial-img-wrap">
                             <img src="images/testimonial-video-placeholder-1.png" alt="Testimonial 1" class="testimonial-img">
@@ -336,7 +341,7 @@
             <div class="process-card process-box-5" >
                 <div class="pcs-icon-box">
                     <img class="process-icon" src="images\process-step-icon-5.svg" alt="icon">
-                    <img class="prcs-num-icon" src="images\pcs-step-num-05.svg" alt="icon">
+                    <img class="pcs-num-icon" src="images\pcs-step-num-05.svg" alt="icon">
                 </div>
                 <h3>Get The Job Done</h3>
                 <p>The chosen roofer will complete your project with precision and professionalism, ensuring high-quality work from start to finish.</p>
@@ -351,7 +356,7 @@
                 <p>Get special offer today</p> 
             </div>
         <h2 class="process-title">this month's special offers</h2>
-        <p>Click on a cuopon below to claim your discount and schedule <br> your garage door or gate service today</p>
+        <p id="frbr">Click on a cuopon below to claim your discount and schedule <br> your garage door or gate service today</p>
         </div>
         <div class="coupon-section">
             <div class="coupon-box"></div>
@@ -374,50 +379,61 @@
                 <img src="images/nav-logo.svg" alt="logo-icon">
                 <p>GARAGE DOOR Installation & Repair</p> 
             </div>
-        <h2 class="installHdr">FAST, Reliable & PROFESSIONALLY <br>DILIVERED Services</h2>
+        <h2 class="installHdr" id="frbr">FAST, Reliable & PROFESSIONALLY <br>DILIVERED Services</h2>
         <p>From a new door install to emergency spring replacement, OA Garage Door delivers expert solutions with same-<br> day availability, licensed technicians, and no shortscut</p>
         </div>
-        <div class="repair-con">
+        <div class="repair-con" id="side-scroll-con">
             <div class="repair-box">
-                <h3>Garage off Track Repair</h3>
-                <p>If your garage door is off track, OA GARAGE DOOR quickly restores it. A door off track can be dangerous and prevent the system from operating correctly, which can lead to safety issues and further damage.
-                </p>
-                <a href="#" class="book-now">
-                    <span class="book-arrow">
-                    <img class="arrow" src="images/arrow-up-right.svg" alt="Arrow pointing up right"> 
-                    </span>
-                    <p>Book Now</p>
-                </a>
+                <div class="repair-txt-con">
+                    <h3>Garage off Track Repair</h3>
+                    <p>If your garage door is off track, OA GARAGE DOOR quickly restores it. A door off track can be dangerous and prevent the system from operating correctly, which can lead to safety issues and further damage.
+                    </p>
+                    <a href="#" class="book-now">
+                        <span class="book-arrow">
+                        <img class="arrow" src="images/arrow-up-right.svg" alt="Arrow pointing up right"> 
+                        </span>
+                        <p>Book Now</p>
+                    </a>
+                </div>
+                
                 <div class="rpr-img-con">
                     <img src="images/rpr-imgbox1-img1.png" alt=""><img src="images/rpr-imgbox1-img2.png" alt="">
                 </div>
             </div>
             <div class="repair-box">
-                <h3>Cables and Drums Repair</h3>
-                <p>OA GARAGE DOOR offers quick cable and drum repairs. These components are crucial for the door's stability and balance, and a failure can lead to misalignment, causing further damage to the system</p>
-                <a href="#" class="book-now">
-                    <span class="book-arrow">
-                    <img class="arrow" src="images/arrow-up-right.svg" alt="Arrow pointing up right"> 
-                    </span>
-                    <p>Book Now</p>
-                </a>
+                <div class="repair-txt-con">
+                    <h3>Cables and Drums Repair</h3>
+                    <p>OA GARAGE DOOR offers quick cable and drum repairs. These components are crucial for the door's stability and balance, and a failure can lead to misalignment, causing further damage to the system</p>
+                    <a href="#" class="book-now">
+                        <span class="book-arrow">
+                        <img class="arrow" src="images/arrow-up-right.svg" alt="Arrow pointing up right"> 
+                        </span>
+                        <p>Book Now</p>
+                    </a>
+                </div>
                 <div class="rpr-img-con">
                     <img src="images/rpr-imgbox2-img1.png" alt=""><img src="images/rpr-imgbox2-img2.png" alt="">
                 </div>
             </div>
             <div class="repair-box">
-                <h3>Commercial Doors</h3>
-                <p>OA GARAGE DOOR specializes in commercial door repairs and maintenance. Commercial doors are critical for the security and functionality of your business, and their proper upkeep ensures smooth operations and reduces risks.</p>
-                <a href="#" class="book-now">
-                    <span class="book-arrow">
-                    <img class="arrow" src="images/arrow-up-right.svg" alt="Arrow pointing up right"> 
-                    </span>
-                    <p>Book Now</p>
-                </a>
+                <div class="repair-txt-con">
+                    <h3>Commercial Doors</h3>
+                    <p>OA GARAGE DOOR specializes in commercial door repairs and maintenance. Commercial doors are critical for the security and functionality of your business, and their proper upkeep ensures smooth operations and reduces risks.</p>
+                    <a href="#" class="book-now">
+                        <span class="book-arrow">
+                        <img class="arrow" src="images/arrow-up-right.svg" alt="Arrow pointing up right"> 
+                        </span>
+                        <p>Book Now</p>
+                    </a>
+                </div>
                 <div class="rpr-img-con">
                     <img src="images/rpr-imgbox3-img1.png" alt=""><img src="images/rpr-imgbox3-img2.png" alt="">
                 </div>
             </div>
+        </div>
+        <div class="rpr-arrow-btn">
+                <button class="rpr-arrow-left" id="arrow-left"><img src="images/arrow-left-icon.svg" alt="arrow-left"></button>
+                <button class="rpr-arrow-right" id="arrow-right"><img src="images/arrow-right-icon.svg" alt="arrow-right"></button>
         </div>
         <div class="rpr-contact-sec">
             <p>Ready for a Repair or New Garage Door? Let get to work!</p>
@@ -466,8 +482,8 @@
             </div>
 
             <div class="fact-button-box">
-                <div class="botton-con-text">
-                    Upgrade Your Door – Boost Your Home's Value –<br> Save On Energy
+                <div class="botton-con-text" id="frbr">
+                    Upgrade Your Door - Boost Your Home's Value -<br> Save On Energy
                 </div>
                 <button class="garage-fact-button">
                     <img src="images/phone-icon.svg" alt="phone-icon">
@@ -484,7 +500,7 @@
                     <img src="images/nav-logo.svg" alt="">
                     <p>You Ask. We Explain.</p>
                 </div>
-                <h2 class="main-title">GARAGE & GATE QUESTIONS,<br>DIAGNOSED HERE</h2>
+                <h2 class="main-title" id="frbr">GARAGE & GATE QUESTIONS,<br>DIAGNOSED HERE</h2>
                 <div class="question-item-1">
                     <div class="question-header">
                         <span class="question-number">1.</span>
@@ -608,7 +624,7 @@
             </div>
             <!-- request input form is below -->
             <div class="rqs-input-form">
-                 <h2 class="form-title">REQUEST SERVICE OR <br> ASK A QUESTION</h2>
+                 <h2 class="form-title" id="frbr">REQUEST SERVICE OR <br> ASK A QUESTION</h2>
             
                 <form class="contact-form">
                     <div class="form-row">
@@ -663,8 +679,8 @@
     <footer class="footer">
         <section class="footer-inner">
             <div class="footer-abt">
-                <div class="f-abt-box"><img src="images/nav-logo.svg" alt=""></div>
-                <div class="f-abt-box">
+                <div class="f-abt-box f-b-1"><img src="images/nav-logo.svg" alt=""></div>
+                <div class="f-abt-box f-b-2">
                     <h3>Quick Link</h3>
                     <ul>
                         <li><a href="#Home">Home</a></li>
@@ -676,7 +692,7 @@
                         <li><a href="#Contact Us">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="f-abt-box">
+                <div class="f-abt-box f-b-3">
                     <h3>Address:</h3>
                     <p class="f-adress">6724 Mannerly Way, Citrus Heights, CA 95621</p>
                 </div>
